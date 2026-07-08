@@ -1,0 +1,67 @@
+:root { --accent: #b5613a; }
+
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: #eae6dd url("../assets/grid-bg-2.png") center / cover no-repeat fixed;
+  color: #2b241d;
+  font-family: 'Hanken Grotesk', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+a { color: #a2206e; }
+a:hover { color: #729003; }
+::selection { background: var(--accent, #b5613a); color: #f6f1e7; }
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes cardIn { from { opacity: 0; transform: translateY(18px) scale(0.97); } to { opacity: 1; transform: none; } }
+@keyframes sheetIn { from { opacity: 0; transform: translateY(24px) scale(0.985); } to { opacity: 1; transform: none; } }
+@keyframes glowPulse { 0%, 100% { filter: brightness(1); } 50% { filter: brightness(1.14); } }
+
+.view-root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: clamp(60px,10vh,110px) clamp(16px,4vw,40px) 40px;
+  position: relative;
+  background-color: transparent;
+  transition: opacity .22s ease, transform .22s ease;
+  opacity: 1;
+  transform: none;
+}
+.view-root.transitioning { opacity: 0; transform: translateY(10px); }
+
+.postcard-view.hidden { display: none; }
+
+/* Contact buttons (chat / linkedin / résumé) */
+.contact-link {
+  display: inline-flex; align-items: center; gap: 9px;
+  font-family: 'Space Mono', monospace; font-size: 12.5px; letter-spacing: 0.03em;
+  text-decoration: none; color: #2b241d; transition: transform .18s ease;
+}
+.contact-link:hover { transform: translateY(-2px); }
+
+/* Recent launch & press card */
+.press-link { transition: border-color .15s ease; }
+.press-link:hover { border-color: var(--accent, #b5613a); }
+
+/* Personal project "stamp" cards */
+.stamp-card { transform: rotate(var(--rot)); transition: transform .2s ease; }
+.stamp-card:hover { transform: rotate(var(--rot)) translateY(-6px); }
+
+/* In-flow nav */
+.nav-btn {
+  font-family: 'Space Mono', monospace; font-size: 12.5px; letter-spacing: 0.03em;
+  border: 2px solid #2b241d; cursor: pointer; padding: 9px 18px; border-radius: 100px;
+  background: transparent; color: #2b241d;
+}
+#nav-about.active { background: #ffe9f6; }
+#nav-work.active { background: #e8f5d0; }
+#nav-projects.active { background: #e4f0ff; }
+
+/* Project detail modal */
+.modal-backdrop { display: flex; }
+.modal-backdrop.hidden { display: none; }
+.modal-close:hover { background: #efe7d8; }
+.app-link:hover, .github-link:hover { transform: translateY(-2px); }
