@@ -14,7 +14,7 @@
         'Helps you prepare for doctor visits',
         'Turns vague feelings into trackable signals'
       ],
-      appUrl: '#', githubUrl: 'https://github.com/shuyanyan/health-journal',
+      appUrl: 'https://health-journal-flax.vercel.app/', githubUrl: 'https://github.com/shuyan1128/health-journal',
       preview: 'assets/healthjournal.gif'
     },
     stylist: {
@@ -25,7 +25,7 @@
         { src: 'assets/ai-stylist-4.png', note: 'AI generates a mood board based on your input' },
         { src: 'assets/ai-stylist-3.png', note: 'final looks, using clothes from your own closet' }
       ],
-      appUrl: '#', githubUrl: 'https://github.com/shuyanyan/ai-stylist'
+      githubUrl: 'https://github.com/shuyan1128/outfit-ai'
     },
     ordering: {
       title: 'College Ordering App',
@@ -36,7 +36,7 @@
         { src: 'assets/ordering-customer.gif', label: 'Customer', caption: 'Customer-facing front: place order, track order status' },
         { src: 'assets/ordering-vendor.gif', label: 'Vendor', caption: 'Vendor-facing front: place order, inventory management, mark order status' }
       ],
-      appUrl: '#', githubUrl: 'https://github.com/shuyanyan/college-ordering'
+      appUrl: 'https://jyumohfour.github.io/milk-honey-ordering-SaaS/#/menu', githubUrl: 'https://github.com/jyumohfour/milk-honey-ordering-SaaS'
     },
     music: {
       title: 'Music Map',
@@ -48,7 +48,7 @@
         { src: 'assets/music-map-add-note.png', label: 'Add a note', caption: 'Search for a song, add an optional username and note, then attach it to a location' },
         { src: 'assets/music-map-view-note.png', label: 'View notes', caption: 'Browse songs shared at a location, complete with personal stories, likes, and replies' }
       ],
-      appUrl: '#', githubUrl: 'https://github.com/shuyanyan/music-map'
+      appUrl: 'assets/music-map-design-doc.pdf', appLabel: '↗ Design doc', githubUrl: 'https://github.com/angiezh/MusicMap'
     }
   };
 
@@ -170,7 +170,13 @@
       modalOneLiner.textContent = p.oneLiner;
       modalOneLiner.style.display = 'block';
     }
-    modalAppLink.href = p.appUrl;
+    if (p.appUrl) {
+      modalAppLink.href = p.appUrl;
+      modalAppLink.textContent = p.appLabel || '↗ View app';
+      modalAppLink.style.display = 'flex';
+    } else {
+      modalAppLink.style.display = 'none';
+    }
     modalGithubLink.href = p.githubUrl;
     modal.classList.remove('hidden');
     modal.scrollTop = 0;
