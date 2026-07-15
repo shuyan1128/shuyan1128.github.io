@@ -15,15 +15,15 @@
         'Turns vague feelings into trackable signals'
       ],
       appUrl: 'https://health-journal-flax.vercel.app/', githubUrl: 'https://github.com/shuyan1128/health-journal',
-      preview: 'assets/healthjournal.gif'
+      preview: 'assets/personal-projects-screenshots/healthjournal.gif'
     },
     stylist: {
       title: 'AI Stylist',
       wipNote: '✎ still a WIP — a few design prototypes below',
       gallery: [
-        { src: 'assets/ai-stylist-1.png', note: 'describe a feeling, or auto-pick an outfit' },
-        { src: 'assets/ai-stylist-4.png', note: 'AI generates a mood board based on your input' },
-        { src: 'assets/ai-stylist-3.png', note: 'final looks, using clothes from your own closet' }
+        { src: 'assets/personal-projects-screenshots/ai-stylist-1.png', note: 'describe a feeling, or auto-pick an outfit' },
+        { src: 'assets/personal-projects-screenshots/ai-stylist-4.png', note: 'AI generates a mood board based on your input' },
+        { src: 'assets/personal-projects-screenshots/ai-stylist-3.png', note: 'final looks, using clothes from your own closet' }
       ],
       githubUrl: 'https://github.com/shuyan1128/outfit-ai'
     },
@@ -33,8 +33,8 @@
       accent: '#4a7aa6',
       description: 'A 2-interface app with ordering and order-tracking features, enabling online ordering for both customers and vendors. It helps reduce the wait for customers to get a drink, and increases vendor efficiency.',
       media: [
-        { src: 'assets/ordering-customer.gif', label: 'Customer', caption: 'Customer-facing front: place order, track order status' },
-        { src: 'assets/ordering-vendor.gif', label: 'Vendor', caption: 'Vendor-facing front: place order, inventory management, mark order status' }
+        { src: 'assets/personal-projects-screenshots/ordering-customer.gif', label: 'Customer', caption: 'Customer-facing front: place order, track order status' },
+        { src: 'assets/personal-projects-screenshots/ordering-vendor.gif', label: 'Vendor', caption: 'Vendor-facing front: place order, inventory management, mark order status' }
       ],
       appUrl: 'https://jyumohfour.github.io/milk-honey-ordering-SaaS/#/menu', githubUrl: 'https://github.com/jyumohfour/milk-honey-ordering-SaaS'
     },
@@ -44,11 +44,11 @@
       accent: '#8a6db0',
       description: 'Music Map provides a social space for people to share music related to locations that hold special meanings to them. Additionally, Music Map empowers users who seek human-recommended music to discover or rediscover "new" music enriched with special personal meanings and stories.',
       media: [
-        { src: 'assets/music-map-intro.png', label: 'Landing', caption: 'Click the map to drop a note, or click an existing note to browse songs shared at that location' },
-        { src: 'assets/music-map-add-note.png', label: 'Add a note', caption: 'Search for a song, add an optional username and note, then attach it to a location' },
-        { src: 'assets/music-map-view-note.png', label: 'View notes', caption: 'Browse songs shared at a location, complete with personal stories, likes, and replies' }
+        { src: 'assets/personal-projects-screenshots/music-map-intro.png', label: 'Landing', caption: 'Click the map to drop a note, or click an existing note to browse songs shared at that location' },
+        { src: 'assets/personal-projects-screenshots/music-map-add-note.png', label: 'Add a note', caption: 'Search for a song, add an optional username and note, then attach it to a location' },
+        { src: 'assets/personal-projects-screenshots/music-map-view-note.png', label: 'View notes', caption: 'Browse songs shared at a location, complete with personal stories, likes, and replies' }
       ],
-      appUrl: 'assets/music-map-design-doc.pdf', appLabel: '↗ Design doc', githubUrl: 'https://github.com/angiezh/MusicMap'
+      appUrl: 'assets/personal-projects-screenshots/music-map-design-doc.pdf', appLabel: '↗ Design doc', githubUrl: 'https://github.com/angiezh/MusicMap'
     }
   };
 

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Design System Preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@400;600;700&family=Fredericka+the+Great&family=Freeman&family=Hanken+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/design-system.css">
+<style>
+  body { margin:0; }
+  .ds-showcase { padding: 60px 40px; display: flex; flex-direction: column; gap: 56px; align-items: flex-start; }
+  .ds-showcase h2 { font-family:'Space Mono',monospace; color:#2b241d; font-size:14px; letter-spacing:0.08em; text-transform:uppercase; margin: 0 0 16px; }
+  .ds-row { display: flex; gap: 28px; flex-wrap: wrap; align-items: flex-start; }
+</style>
+</head>
+<body>
+<div class="ds-page">
+  <div class="ds-showcase">
+
+    <section>
+      <h2>1. Intro Card</h2>
+      <div class="ds-intro-card" style="max-width:820px;">
+        <div class="ds-intro-card__grid">
+          <div class="ds-intro-card__left">
+            <p class="ds-intro-card__subtitle">ABOUT ME</p>
+            <p class="ds-intro-card__body">I'm an <strong>AI product manager</strong> and <strong><u>0-1 builder based in NYC</u></strong>. Currently, I lead the development of <strong>AI agents</strong> for Google Ads, transforming high-stakes business problems into intuitive, high-trust agentic experiences. I joined Google through the <strong>APM program</strong>, previously building product for ChromeOS and Search.</p>
+          </div>
+          <div class="ds-intro-card__right">
+            <img src="assets/avatar.jpg" alt="" style="width:110px; height:110px; object-fit:cover; border-radius:6px; border:2px solid #2b241d;">
+            <h1 class="ds-intro-card__title"><span>Shuyan</span><span>Yan</span></h1>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:18px;"><span class="ds-callout-pill">hello, welcome to my site :)</span></div>
+    </section>
+
+    <section>
+      <h2>2. Notepad Button (About Me nav icon)</h2>
+      <div class="ds-notepad-btn">
+        <span class="ds-notepad-btn__lines">
+          <span class="ds-notepad-btn__accent"></span>
+          <span class="ds-notepad-btn__rules"><span></span><span></span><span></span></span>
+        </span>
+        <span class="ds-notepad-btn__label">About Me</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>3. Calendar Card — nav mode vs. full mode</h2>
+      <div class="ds-row">
+        <div class="ds-calendar-card ds-calendar-card--nav">
+          <img class="ds-calendar-card__strip" src="assets/calendardecor.svg" alt="">
+          <div class="ds-calendar-card__body">
+            <p class="ds-calendar-card__label">Career<br>Journey</p>
+          </div>
+        </div>
+        <div class="ds-calendar-card ds-calendar-card--full" style="width:640px;">
+          <img class="ds-calendar-card__strip" src="assets/calendardecor.svg" alt="">
+          <div class="ds-calendar-card__body">
+            <p style="font-family:'Space Mono',monospace; color:var(--ds-red); font-weight:700; font-size:22px; letter-spacing:0.04em; margin:0 0 10px;">MY JOURNEYS</p>
+            <div style="border-top:1.5px solid var(--ds-red); padding-top:16px;">
+              <p style="font-family:'Advent Pro',sans-serif; font-weight:600; color:#5a5049; margin:0 0 4px;">2025 – Now</p>
+              <p style="font-family:'Hanken Grotesk',sans-serif; margin:0;"><strong>Product Manager</strong> | <span style="color:var(--ds-red); font-weight:600;">Google</span> | <span style="color:#9a8c78;">NYC</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>4. Laptop Button</h2>
+      <div class="ds-laptop-btn">
+        <img src="assets/laptopicon.svg" alt="">
+        <span class="ds-laptop-btn__label">Personal<br>Projects</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>5. Irregular Action Shapes (x3, independently transformed)</h2>
+      <div class="ds-row" style="gap:8px;">
+        <div class="ds-irregular" style="transform: rotate(-4deg);">
+          <img class="ds-irregular__shape" src="assets/irregularshapes.svg" alt="">
+          <div class="ds-irregular__content">
+            <img class="ds-irregular__icon" src="assets/Resumeicon.svg" alt="">
+            <span class="ds-irregular__label">Resume</span>
+          </div>
+        </div>
+        <div class="ds-irregular" style="transform: rotate(3deg) scale(0.92);">
+          <img class="ds-irregular__shape" src="assets/irregularshapes.svg" alt="">
+          <div class="ds-irregular__content">
+            <img class="ds-irregular__icon" src="assets/linkedinlogo.svg" alt="" style="width:26px;">
+            <span class="ds-irregular__label">LinkedIn</span>
+          </div>
+        </div>
+        <div class="ds-irregular" style="transform: rotate(-2deg) scale(1.05);">
+          <img class="ds-irregular__shape" src="assets/irregularshapes.svg" alt="">
+          <div class="ds-irregular__content">
+            <img class="ds-irregular__icon" src="assets/chatlogo.svg" alt="" style="width:34px;">
+            <span class="ds-irregular__label">Let's chat</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</div>
+</body>
+</html>

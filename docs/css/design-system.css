@@ -1,0 +1,316 @@
+/* ============================================================
+   NEW DESIGN SYSTEM (2026 revamp)
+   Colors, fonts, and reusable components: IntroCard, NotepadButton,
+   CalendarCard, LaptopButton, IrregularAction.
+   ============================================================ */
+
+.ds-about-wrap, .ds-about-wrap *, .ds-about-wrap *::before, .ds-about-wrap *::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --ds-red: #CD4B2B;
+  --ds-grey: #E4E3E3;
+  --ds-offwhite: #FFFCF2;
+  --ds-brown: #604A3E;
+  --ds-title-1: #572C25;
+  --ds-title-2: #A55343;
+  --ds-body-text: #614943;
+  --ds-nav-label: #2B241D;
+}
+
+.ds-page {
+  min-height: 100vh;
+  background: #fbebd1 url("../assets/personal_website_bg_image_cropped.png") center / cover no-repeat fixed;
+  font-family: 'Hanken Grotesk', system-ui, sans-serif;
+}
+
+/* ---------- 1. Intro Card ---------- */
+.ds-intro-card {
+  background: var(--ds-offwhite);
+  border: 3px solid var(--ds-red);
+  border-radius: 28px;
+  padding: clamp(44px, 7vw, 76px) clamp(32px, 5vw, 56px);
+  box-shadow: 0 18px 40px rgba(43, 30, 20, 0.18);
+  min-height: 460px;
+  display: flex;
+  align-items: center;
+}
+.ds-intro-card__grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: clamp(20px, 3vw, 36px);
+}
+.ds-intro-card__left {
+  border-right: 1.5px solid rgba(205, 75, 43, 0.35);
+  padding-right: clamp(20px, 3vw, 36px);
+}
+.ds-intro-card__subtitle {
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.08em;
+  color: var(--ds-red);
+  margin: 0 0 20px;
+}
+.ds-intro-card__body-wrap {
+  background-image: repeating-linear-gradient(to bottom, transparent 0 33px, #d8c9a3 33px 34.5px);
+}
+.ds-intro-card__body {
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-style: italic;
+  font-size: 18px;
+  line-height: 34.5px;
+  color: var(--ds-body-text);
+  margin: 0;
+}
+.ds-intro-card__body strong {
+  font-weight: 700;
+}
+.ds-intro-card__body u {
+  text-decoration-color: rgba(97, 73, 67, 0.5);
+}
+.ds-intro-card__right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+}
+.ds-intro-card__title {
+  font-family: 'Fredericka the Great', cursive;
+  font-size: clamp(46px, 5vw, 64px);
+  line-height: 1.05;
+  text-align: center;
+  margin: 0;
+}
+.ds-intro-card__title span:first-child { color: var(--ds-title-2); display: block; }
+.ds-intro-card__title span:last-child { color: var(--ds-title-1); display: block; }
+
+/* ---------- Below-card callout pill ---------- */
+.ds-callout-pill {
+  display: inline-block;
+  background: var(--ds-grey);
+  color: var(--ds-red);
+  font-family: 'Space Mono', monospace;
+  font-size: 15px;
+  padding: 12px 28px;
+  border-radius: 100px;
+}
+
+/* ---------- 2. Notepad Button (About Me nav icon) ---------- */
+.ds-notepad-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--ds-offwhite);
+  border: 2.5px solid var(--ds-red);
+  border-radius: 16px;
+  padding: 16px 22px;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 10px 22px rgba(43, 30, 20, 0.16);
+}
+.ds-notepad-btn__lines {
+  display: flex;
+  align-items: stretch;
+  gap: 7px;
+  height: 34px;
+}
+.ds-notepad-btn__accent {
+  width: 2.5px;
+  background: var(--ds-red);
+  border-radius: 2px;
+}
+.ds-notepad-btn__rules {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 22px;
+}
+.ds-notepad-btn__rules span {
+  display: block;
+  height: 1.5px;
+  background: #b9b2ac;
+}
+.ds-notepad-btn__label {
+  font-family: 'Freeman', cursive;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 1.2;
+  color: var(--ds-nav-label);
+}
+
+/* ---------- 3. Calendar Card ---------- */
+.ds-calendar-card {
+  border: 3px solid var(--ds-red);
+  border-radius: 0 0 20px 20px;
+  background: var(--ds-offwhite);
+  overflow: hidden;
+  box-shadow: 0 10px 22px rgba(43, 30, 20, 0.16);
+}
+.ds-calendar-card__strip {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.ds-calendar-card__body {
+  padding: 18px 20px;
+}
+.ds-calendar-card--nav {
+  width: 190px;
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+}
+.ds-calendar-card--nav .ds-calendar-card__body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 160px;
+  text-align: center;
+}
+.ds-calendar-card__label {
+  font-family: 'Freeman', cursive;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 1.25;
+  color: var(--ds-nav-label);
+  margin: 0;
+}
+.ds-calendar-card--full {
+  width: 100%;
+  max-width: 800px;
+}
+.ds-calendar-card--full .ds-calendar-card__body {
+  padding: clamp(20px, 3vw, 36px);
+}
+
+/* ---------- 4. Laptop Button ---------- */
+.ds-laptop-btn {
+  position: relative;
+  display: inline-block;
+  width: 240px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.ds-laptop-btn img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.ds-laptop-btn__label {
+  position: absolute;
+  left: 24.6%;
+  top: 6.6%;
+  width: 68%;
+  height: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Freeman', cursive;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.2;
+  color: var(--ds-nav-label);
+}
+
+/* ---------- 5. Irregular Action Shape ---------- */
+.ds-irregular {
+  position: relative;
+  display: inline-block;
+  width: 190px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.ds-irregular img.ds-irregular__shape {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.ds-irregular__content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.ds-irregular__icon {
+  width: 30px;
+  height: auto;
+  flex-shrink: 0;
+}
+.ds-irregular__label {
+  font-family: 'Freeman', cursive;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 1.15;
+  color: #fffdf6;
+}
+
+/* ============================================================
+   PAGE LAYOUT — About Me
+   ============================================================ */
+.ds-about-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 70px 90px 50px;
+}
+.ds-about-main {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 820px;
+  margin: 0 auto;
+}
+.ds-about-callout {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  margin-top: 24px;
+}
+.ds-about-resume {
+  position: absolute;
+  top: 0px;
+  left: 0%;
+  z-index: 3;
+}
+.ds-about-calendar {
+  position: absolute;
+  top: 10px;
+  right: -73px;
+  z-index: 3;
+}
+.ds-about-chat {
+  position: absolute;
+  top: 40%;
+  left: -193px;
+  z-index: 3;
+}
+.ds-about-laptop {
+  position: absolute;
+  bottom: -20px;
+  left: -60px;
+  z-index: 3;
+}
+.ds-about-linkedin {
+  position: absolute;
+  bottom: 20px;
+  right: -80px;
+  z-index: 3;
+}
+@media (max-width: 900px) {
+  .ds-about-wrap { padding: 60px 24px 100px; }
+  .ds-about-resume, .ds-about-calendar, .ds-about-chat, .ds-about-laptop, .ds-about-linkedin {
+    position: static;
+    display: inline-block;
+    margin: 8px;
+  }
+  .ds-intro-card__grid { grid-template-columns: 1fr; }
+  .ds-intro-card__left { border-right: none; padding-right: 0; border-bottom: 1.5px solid rgba(205,75,43,0.35); padding-bottom: 20px; margin-bottom: 20px; }
+}
