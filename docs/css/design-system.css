@@ -4,7 +4,9 @@
    CalendarCard, LaptopButton, IrregularAction.
    ============================================================ */
 
-.ds-about-wrap, .ds-about-wrap *, .ds-about-wrap *::before, .ds-about-wrap *::after {
+.ds-about-wrap, .ds-about-wrap *, .ds-about-wrap *::before, .ds-about-wrap *::after,
+.ds-calendar-card, .ds-calendar-card *, .ds-calendar-card *::before, .ds-calendar-card *::after,
+.ds-intro-card, .ds-intro-card *, .ds-intro-card *::before, .ds-intro-card *::after {
   box-sizing: border-box;
 }
 
@@ -181,7 +183,7 @@
 }
 .ds-calendar-card--full {
   width: 100%;
-  max-width: 800px;
+  max-width: 960px;
 }
 .ds-calendar-card--full .ds-calendar-card__body {
   padding: clamp(20px, 3vw, 36px);
@@ -251,6 +253,22 @@
   color: #fffdf6;
 }
 
+/* ---------- Personal Projects — free-form preview boxes ---------- */
+.ds-project-box {
+  box-sizing: border-box;
+  cursor: pointer;
+  display: block;
+  max-width: 100%;
+  border: 3px solid var(--ds-red);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 16px 32px rgba(43, 36, 29, 0.22);
+  background: var(--ds-offwhite);
+  transition: transform 0.2s ease;
+}
+.ds-project-box:hover { transform: translateY(-4px); }
+.ds-project-box img { display: block; width: 100%; height: auto; }
+
 /* ============================================================
    PAGE LAYOUT — About Me
    ============================================================ */
@@ -307,10 +325,24 @@
 @media (max-width: 900px) {
   .ds-about-wrap { padding: 60px 24px 100px; }
   .ds-about-resume, .ds-about-calendar, .ds-about-chat, .ds-about-laptop, .ds-about-linkedin {
-    position: static;
+    position: relative;
+    top: auto; left: auto; right: auto; bottom: auto;
     display: inline-block;
     margin: 8px;
   }
   .ds-intro-card__grid { grid-template-columns: 1fr; }
   .ds-intro-card__left { border-right: none; padding-right: 0; border-bottom: 1.5px solid rgba(205,75,43,0.35); padding-bottom: 20px; margin-bottom: 20px; }
+}
+
+/* ============================================================
+   PAGE LAYOUT — Career Journey (responsive)
+   ============================================================ */
+@media (max-width: 640px) {
+  .ds-journey-entry {
+    grid-template-columns: 1fr !important;
+    gap: 6px !important;
+  }
+  .ds-journey-title {
+    white-space: normal !important;
+  }
 }

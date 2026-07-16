@@ -4,7 +4,7 @@ html { scroll-behavior: smooth; overflow-x: hidden; }
 body {
   margin: 0;
   overflow-x: hidden;
-  background: #fbebd1 url("../assets/personal_website_bg_image_cropped.png") center / cover no-repeat fixed;
+  background: #efe6d3 url("../assets/personal_website_bg_image.png") center / cover no-repeat fixed;
   color: #2b241d;
   font-family: 'Hanken Grotesk', system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -34,6 +34,7 @@ a:hover { color: #729003; }
 .view-root.transitioning { opacity: 0; transform: translateY(10px); }
 
 .postcard-view.hidden { display: none; }
+.postcard-view { min-width: 0; max-width: 100%; }
 .hidden { display: none; }
 
 /* Contact buttons (chat / linkedin / résumé) */

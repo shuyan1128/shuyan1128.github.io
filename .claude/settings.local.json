@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -m http.server 8765 --directory /Users/shuyanyan/Downloads/personal-website/docs)",
+      "Bash(cp /Users/shuyanyan/Downloads/personal-website/docs/index.html /tmp/idx_reordertest.html)",
+      "Bash(python3 -)",
+      "Bash(\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless --disable-gpu --window-size=1100,950 --screenshot=/private/tmp/claude-501/-Users-shuyanyan-Downloads-personal-website/71769ffd-a269-4f49-a66e-523b075eee73/scratchpad/reordered-projects.png --virtual-time-budget=3000 \"http://localhost:8765/index.html\")",
+      "Bash(cp /tmp/idx_reordertest.html /Users/shuyanyan/Downloads/personal-website/docs/index.html)",
+      "Bash(lsof -ti:8765)",
+      "Bash(xargs kill -9)"
+    ]
+  }
+}
