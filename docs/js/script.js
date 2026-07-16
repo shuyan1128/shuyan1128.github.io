@@ -28,21 +28,19 @@
       githubUrl: 'https://github.com/shuyan1128/outfit-ai'
     },
     ordering: {
-      title: 'College Ordering App',
+      title: 'Milk + Honey Online Ordering App',
       wide: true,
       accent: '#4a7aa6',
-      description: 'A 2-interface app with ordering and order-tracking features, enabling online ordering for both customers and vendors. It helps reduce the wait for customers to get a drink, and increases vendor efficiency.',
       media: [
-        { src: 'assets/personal-projects-screenshots/ordering-customer.gif', label: 'Customer', caption: 'Customer-facing front: place order, track order status' },
-        { src: 'assets/personal-projects-screenshots/ordering-vendor.gif', label: 'Vendor', caption: 'Vendor-facing front: place order, inventory management, mark order status' }
+        { src: 'assets/personal-projects-screenshots/ordering-customer.gif', label: 'Customer', caption: 'Sign-in/up, place orders online, track order status' },
+        { src: 'assets/personal-projects-screenshots/ordering-vendor.gif', label: 'Vendor', caption: 'Place orders, manage inventory, mark order status' }
       ],
       appUrl: 'https://jyumohfour.github.io/milk-honey-ordering-SaaS/#/menu', githubUrl: 'https://github.com/jyumohfour/milk-honey-ordering-SaaS'
     },
     music: {
       title: 'Music Map',
       wide: true,
-      accent: '#8a6db0',
-      description: 'Music Map provides a social space for people to share music related to locations that hold special meanings to them. Additionally, Music Map empowers users who seek human-recommended music to discover or rediscover "new" music enriched with special personal meanings and stories.',
+      accent: '#CD4B2B',
       media: [
         { src: 'assets/personal-projects-screenshots/music-map-intro.png', label: 'Landing', caption: 'Click the map to drop a note, or click an existing note to browse songs shared at that location' },
         { src: 'assets/personal-projects-screenshots/music-map-add-note.png', label: 'Add a note', caption: 'Search for a song, add an optional username and note, then attach it to a location' },
@@ -63,6 +61,7 @@
     work: document.getElementById('nav-work'),
     projects: document.getElementById('nav-projects')
   };
+  var inFlowNav = document.getElementById('in-flow-nav');
   var modal = document.getElementById('project-modal');
   var modalPanel = document.getElementById('modal-panel');
   var modalPreviewWrap = document.getElementById('modal-preview-wrap');
@@ -82,6 +81,7 @@
       sections[key].classList.toggle('hidden', key !== state.view);
       navButtons[key].classList.toggle('active', key === state.view);
     });
+    inFlowNav.style.display = state.view === 'about' ? 'none' : 'flex';
   }
 
   window.goTo = function (view) {

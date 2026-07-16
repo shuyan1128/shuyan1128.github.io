@@ -153,28 +153,56 @@
 
   <!-- ============ PERSONAL PROJECTS POSTCARD ============ -->
   <section id="view-projects" class="postcard-view hidden">
-  <div style="width:100%; max-width:1080px; margin:0 auto; padding:20px 16px 40px;">
+  <div style="box-sizing:border-box; width:100%; max-width:1112px; margin:0 auto; padding:20px 16px 40px;">
 
     <div style="display:inline-block; background:var(--ds-grey); border-radius:100px; padding:14px 28px; margin-bottom:32px;">
       <h2 style="margin:0; font-family:'Space Mono',monospace; font-weight:700; font-size:clamp(18px,2.2vw,24px); letter-spacing:0.04em; color:var(--ds-red);">MY PERSONAL PROJECTS</h2>
     </div>
 
-    <div style="display:flex; flex-wrap:wrap; align-items:flex-start; gap:28px;">
+    <div class="ds-projects-masonry">
 
-      <div onclick="openProject('health')" class="ds-project-box" style="width:500px;">
-        <img src="assets/personal-projects-screenshots/healthjournal.gif" alt="Health Journal">
+      <div onclick="openProject('health')" class="ds-project-box ds-project-box--offwhite ds-project-box--w-lg">
+        <div class="ds-project-box__media">
+          <img src="assets/personal-projects-screenshots/healthjournal.gif" alt="Health Journal">
+        </div>
+        <div class="ds-project-box__body">
+          <span class="ds-project-box__tag ds-project-box__tag--teal">Health AI</span>
+          <p class="ds-project-box__desc">An AI-assisted health journal that captures your daily symptoms and remembers your recurring triggers over time. It surfaces possible patterns and correlations, turning vague feelings into trackable signals—so you walk into every doctor visit prepared.</p>
+          <p class="ds-project-box__note">Built from 0-1, inspired by personal expereince</p>
+        </div>
       </div>
 
-      <div onclick="openProject('ordering')" class="ds-project-box" style="width:550px; margin-top:60px;">
-        <img src="assets/personal-projects-screenshots/ordering-customer.gif" alt="Ordering App">
+      <div onclick="openProject('ordering')" class="ds-project-box ds-project-box--brown ds-project-box--w-xl">
+        <div class="ds-project-box__media">
+          <img src="assets/personal-projects-screenshots/ordering-customer.gif" alt="Ordering App">
+        </div>
+        <div class="ds-project-box__body">
+          <span class="ds-project-box__tag ds-project-box__tag--mustard">Online Ordering - Web App</span>
+          <p class="ds-project-box__desc"> A 2 interface web app that reduces wait time for customers to get a drink, allowing customer-side online ordering and vendor side order tracking & management</p>
+          <p class="ds-project-box__note">Founded the project from 0-1, built, tested, shipped, and used by 100+ daily customers</p>
+        </div>
       </div>
 
-      <div onclick="openProject('music')" class="ds-project-box" style="width:600px; margin-top:64px;">
-        <img src="assets/personal-projects-screenshots/music-map-1.png" alt="Music Map">
+      <div onclick="openProject('music')" class="ds-project-box ds-project-box--red ds-project-box--w-xxl">
+        <div class="ds-project-box__media">
+          <img src="assets/personal-projects-screenshots/music-map-1.png" alt="Music Map">
+        </div>
+        <div class="ds-project-box__body">
+          <span class="ds-project-box__tag ds-project-box__tag--purple">Social app</span>
+          <p class="ds-project-box__desc"> a social space for people to share music related to locations that hold special meanings to them.</p>
+          <p class="ds-project-box__note"> Designed, prototyped, tested</p>
+        </div>
       </div>
 
-      <div onclick="openProject('stylist')" class="ds-project-box" style="width:190px; margin-top:40px;">
-        <img src="assets/personal-projects-screenshots/ai-stylist-2.png" alt="AI Stylist">
+      <div onclick="openProject('stylist')" class="ds-project-box ds-project-box--offwhite ds-project-box--w-sm">
+        <div class="ds-project-box__media">
+          <img src="assets/personal-projects-screenshots/ai-stylist-2.png" alt="AI Stylist">
+        </div>
+        <div class="ds-project-box__body">
+          <span class="ds-project-box__tag ds-project-box__tag--pink">Fashion AI</span>
+          <p class="ds-project-box__desc">AI stylist that picks a daily outfit for you based on your own wardrobe.</p>
+          <p class="ds-project-box__note">Still working in process of prompt tuning, building and testing </p>
+        </div>
       </div>
 
     </div>
@@ -183,7 +211,7 @@
   </section>
 
   <!-- IN-FLOW NAV — reserves its own space, never overlaps card content -->
-  <div style="position:static; display:flex; gap:10px; background:#FFFCF2; backdrop-filter:blur(6px); padding:8px; border-radius:100px; margin-top:36px; box-shadow:0 8px 20px rgba(43,36,29,0.15);">
+  <div id="in-flow-nav" style="position:static; display:flex; gap:10px; background:#FFFCF2; backdrop-filter:blur(6px); padding:8px; border-radius:100px; margin-top:36px; box-shadow:0 8px 20px rgba(43,36,29,0.15);">
     <button id="nav-about" class="nav-btn active" onclick="goTo('about')">About me</button>
     <button id="nav-work" class="nav-btn" onclick="goTo('work')">View work</button>
     <button id="nav-projects" class="nav-btn" onclick="goTo('projects')">Personal projects</button>

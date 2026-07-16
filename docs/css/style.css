@@ -4,7 +4,7 @@ html { scroll-behavior: smooth; overflow-x: hidden; }
 body {
   margin: 0;
   overflow-x: hidden;
-  background: #efe6d3 url("../assets/personal_website_bg_image.png") center / cover no-repeat fixed;
+  background: #efe6d3 url("../assets/personal_website_bg_image_cropped.png") center / cover no-repeat fixed;
   color: #2b241d;
   font-family: 'Hanken Grotesk', system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -56,12 +56,10 @@ a:hover { color: #729003; }
 /* In-flow nav */
 .nav-btn {
   font-family: 'Space Mono', monospace; font-size: 12.5px; letter-spacing: 0.03em;
-  border: 2px solid #2b241d; cursor: pointer; padding: 9px 18px; border-radius: 100px;
+  border: 2px solid  #FFFCF2; cursor: pointer; padding: 9px 18px; border-radius: 100px;
   background: transparent; color: #2b241d;
 }
-#nav-about.active { background: #ffe9f6; }
-#nav-work.active { background: #e8f5d0; }
-#nav-projects.active { background: #e4f0ff; }
+.nav-btn.active { background: #604A3E; color: #FFFCF2; }
 
 /* Project detail modal */
 .modal-backdrop { display: flex; }
